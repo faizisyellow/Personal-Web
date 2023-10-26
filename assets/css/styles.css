@@ -486,23 +486,22 @@ img {
 /* LOADMORE */
 #loadMore {
   width: 200px;
-  color: #fff;
+  color: var(--white-color);
   display: block;
   text-align: center;
   margin: 20px auto;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid transparent;
-  background-color: blue;
-  transition: .3s;
+  background-color: var(--first-color);
+  transition: 0.3s;
 }
 #loadMore:hover {
-  color: blue;
-  background-color: #fff;
-  border: 1px solid blue;
+  color: var(--first-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--first-color);
   text-decoration: none;
 }
-
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
@@ -513,8 +512,7 @@ img {
   #testimonials .testimonials__container .the-testimonials .user-profile p {
     display: flex;
     flex-wrap: wrap;
-    width:200px;
-  
+    width: 200px;
   }
 }
 

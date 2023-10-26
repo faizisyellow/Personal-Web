@@ -10,6 +10,7 @@ const Cards = {
   },
 };
 
+
 ///PORFOLIO CARDS
 const cardContainerPortfolio = document.querySelector(".portfolio__container");
 const loadMoreButton = document.getElementById("loadMore");
@@ -17,6 +18,7 @@ const loadMoreButton = document.getElementById("loadMore");
 function createCard(cardContainer, cardTemplate, scrollElement) {
   const cardHTML = cardTemplate;
   cardContainer.insertAdjacentHTML("beforeend", cardHTML);
+//   src.reveal(".portfolio__img", { interval: 200 });
 }
 
 loadMoreButton.addEventListener("click", () => {
