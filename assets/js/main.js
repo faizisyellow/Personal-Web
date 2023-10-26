@@ -68,7 +68,8 @@ sr.reveal(".skills__img", { delay: 400 });
 
 /*SCROLL PORTFOLIO*/
 sr.reveal(".portfolio__img", { interval: 200 });
-
+/*SCROLL LOADMORE*/
+sr.reveal("#loadMore", { interval: 200 });
 /*SCROLL CERTIFICATE*/
 sr.reveal(".sertfikat__img", { interval: 200 });
 
