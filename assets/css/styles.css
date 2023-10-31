@@ -508,6 +508,9 @@ img {
   }
 }
 @media screen and (max-width: 374px) {
+  .home__scroll a {
+    display: none;
+  }
   #testimonials .user-name p {
     margin-top: -10px;
     line-height: 20px;
