@@ -72,7 +72,7 @@ sr.reveal(".portfolio__img", { interval: 200 });
 
 
 /*SCROLL CERTIFICATE*/
-sr.reveal(".sertfikat__img", { interval: 200 });
+sr.reveal(".sertfikat__img", { interval: 150 });
 
 /*SCROLL TESTIMONIALS*/
 sr.reveal(".the-testimonials", { interval: 200 });
