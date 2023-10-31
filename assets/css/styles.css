@@ -506,20 +506,19 @@ img {
   .home__img {
     width: 230px;
   }
-  #testimonials .testimonials__container .the-testimonials .user-profile p {
-    color: #6e07f3;
+}
+@media screen and (max-width: 374px) {
+  #testimonials .user-name p {
+    margin-top: -10px;
+    line-height: 20px;
   }
-  .user-profile img {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-    object-fit: cover;
-    object-position: 0 -1px;
+  #testimonials .user-profile img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
     border-radius: 50%;
-    padding: 2px;
   }
 }
-
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -606,6 +605,7 @@ img {
     grid-template-rows: repeat(1, 1fr);
     column-gap: 2rem;
   }
+
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
