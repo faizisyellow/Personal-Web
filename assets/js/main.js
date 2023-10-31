@@ -46,7 +46,7 @@ const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
   duration: 2000,
-  reset: true,
+  // reset: false,
 });
 
 /*SCROLL HOME*/
@@ -64,10 +64,12 @@ sr.reveal(".about__social-icon", { delay: 300, interval: 200 });
 /*SCROLL SKILLS*/
 sr.reveal(".skills__subtitle", {});
 sr.reveal(".skills__name", { distance: "20px", delay: 50, interval: 100 });
-sr.reveal(".skills__img", { delay: 400 });
+sr.reveal(".skills__img", { delay: 300 });
 
 /*SCROLL PORTFOLIO*/
 sr.reveal(".portfolio__img", { interval: 200 });
+
+
 
 /*SCROLL CERTIFICATE*/
 sr.reveal(".sertfikat__img", { interval: 200 });
@@ -78,108 +80,16 @@ sr.reveal(".the-testimonials", { interval: 200 });
 /*SCROLL BUTTON CV*/
 sr.reveal(".curiculumVite", { interval: 200 });
 
-const clicks = document.querySelectorAll(".sertfikat__container .sertfikat__img .sertfikat__link .sertfikat__link-name");
-clicks[0].addEventListener("click", () => {
-  const body = document.body;
-  body.style.overflowX = "hidden";
-  const parent = document.querySelector(".sertfikat__container");
-  parent.style.position = "relative";
-  const thumb = document.getElementById("thumbnail");
-  const img = document.createElement("img");
-  img.src = "assets/img/sertifikatRakryan1.jpg";
-  img.style.objectFit = "fill";
-  img.style.width = "100vw";
-  img.style.height = "70vh";
-  img.style.position = "absolute";
-  img.style.top = "0";
-  img.style.left = "0";
-  img.style.display = "flex";
-  img.style.justifyContent = "center";
-
-  thumb.appendChild(img);
-
-  const close = document.getElementById("close");
-  close.style.display = "block";
-  close.style.zIndex = "1";
-
-  close.addEventListener("click", () => {
-    thumb.remove();
-
-    setTimeout(() => {
-      location.reload();
-    }, 100);
+///HOVER CERTIFICATE
+function hoverImgCertificate(imgId, hoverImg, oriImg) {
+  const certificateHover = document.querySelector(`section#sertfikat img#${imgId}`);
+  const CERTIFICATE_ORG = oriImg;
+  certificateHover.addEventListener("mouseenter", () => {
+    certificateHover.src = hoverImg;
   });
-});
-clicks[1].addEventListener("click", () => {
-  const body = document.body;
-  body.style.overflowX = "hidden";
-  const parent = document.querySelector(".sertfikat__container");
-  parent.style.position = "relative";
-  const thumb = document.getElementById("thumbnail");
-  const img = document.createElement("img");
-  img.src = "assets/img/SertifikatRakryan 2.jpg";
-  img.style.objectFit = "fill";
-  img.style.width = "100vw";
-  img.style.height = "70vh";
-  img.style.position = "absolute";
-  img.style.top = "0";
-  img.style.left = "0";
-  img.style.display = "flex";
-  img.style.justifyContent = "center";
-
-  thumb.appendChild(img);
-
-  const close = document.getElementById("close");
-  close.style.display = "block";
-  close.style.zIndex = "1";
-
-  close.addEventListener("click", () => {
-    thumb.remove();
-    setTimeout(() => {
-      location.reload();
-    }, 100);
+  certificateHover.addEventListener("mouseleave", () => {
+    certificateHover.src = CERTIFICATE_ORG;
   });
-});
-clicks[2].addEventListener("click", () => {
-  const body = document.body;
-  body.style.overflowX = "hidden";
-  const parent = document.querySelector(".sertfikat__container");
-  parent.style.position = "relative";
-  const thumb = document.getElementById("thumbnail");
-  const img = document.createElement("img");
-  img.src = "assets/img/Sertifikat-Muhamat faissal maulana_page.jpg";
-  img.style.objectFit = "fill";
-  img.style.width = "100vw";
-  img.style.height = "70vh";
-  img.style.position = "absolute";
-  img.style.top = "0";
-  img.style.left = "0";
-  img.style.display = "flex";
-  img.style.justifyContent = "center";
-
-  thumb.appendChild(img);
-
-  const close = document.getElementById("close");
-  close.style.display = "block";
-  close.style.zIndex = "1";
-
-  close.addEventListener("click", () => {
-    thumb.remove();
-
-    setTimeout(() => {
-      location.reload();
-    }, 100);
-  });
-});
-
-// ===DOWNLOAD CV==== //
-document.getElementById("cv").addEventListener("click", () => {
-  const downloadAnchor = document.createElement("a");
-
-  const fileURL = "assets/cv/CV.pdf";
-
-  downloadAnchor.href = fileURL;
-  downloadAnchor.download = "cv-2023";
-
-  downloadAnchor.click();
-});
+}
+const certificate1 = hoverImgCertificate("img-1", "assets/img/nilai-tahap-1.jpg", "assets/img/rakryan-tahap-1.jpg");
+const certificate2 = hoverImgCertificate("img-2", "assets/img/nilai-tahap-2.jpg", "assets/img/rakryan-tahap-2.jpg");
