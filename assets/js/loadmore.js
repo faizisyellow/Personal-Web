@@ -1,21 +1,19 @@
 const Cards = {
   porfolioCards: {
     card1: ` <div class="portfolio__img">
-      <img src="assets/img/boty-demo.jpg" alt="" />
-    
-      <div class="portfolio__link">
-        <a href="https://faizisyellow.github.io/boyoftheyear/" class="portfolio__link-name" target="_blank">Visit Website<i class="bx bx-chevron-right"></i></a>
-      </div>
-    </div>`,
-    card2: `
-    <div class="portfolio__img">
-      <img src="assets/img/flipping-card-demo.jpg" alt="" />
-    
-      <div class="portfolio__link">
-        <a href="https://faizisyellow.github.io/Flipping-Card/" class="portfolio__link-name" target="_blank">Visit Website<i class="bx bx-chevron-right"></i></a>
-      </div>
+    <img src="assets/img/boty-demo.jpg" alt="" />
+  
+    <div class="portfolio__link">
+      <a href="https://faizisyellow.github.io/boyoftheyear/" class="portfolio__link-name" target="_blank">Visit Website<i class="bx bx-chevron-right"></i></a>
     </div>
-    `,
+  </div>`,
+    card2: `   <div class="portfolio__img">
+  <img src="assets/img/closhop-demo.jpg" alt="websitedemo" />
+
+  <div class="portfolio__link">
+    <a href="https://closhop.netlify.app" target="_blank" class="portfolio__link-name">Visit Website<i class="bx bx-chevron-right"></i></a>
+  </div>
+</div>`,
   },
 };
 
